@@ -5,6 +5,7 @@ from fixture.session import SessionHelper
 from fixture.project_helper import ProjectHelper
 from fixture.mail import MailHelper
 from fixture.signup import SignupHelper
+from fixture.soap import SoapHelper
 
 
 class Application:
@@ -25,6 +26,7 @@ class Application:
         self.base_url = config["web"]["baseUrl"]
         self.mail = MailHelper(self)
         self.signup = SignupHelper(self)
+        self.soap = SoapHelper(self)
 
     def is_valid(self):
         try:
